@@ -1,0 +1,11 @@
+rootProject.name = 'event-listener-demo'
+include 'stock'
+include 'account'
+include 'outbound'
+include 'account-event-listener'
+include 'outbound-event-listener'
+include 'stock-event-listener'
+include 'all'
+include 'core'
+include 'account-core'
+
