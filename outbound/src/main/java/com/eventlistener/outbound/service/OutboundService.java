@@ -1,7 +1,7 @@
 package com.eventlistener.outbound.service;
 
-import com.eventlistener.account.event.listener.AccountPayload;
-import com.eventlistener.stock.event.listener.StockPayload;
+import com.eventlistener.account.client.AccountPayload;
+import com.eventlistener.stock.client.StockPayload;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;

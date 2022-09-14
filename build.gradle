@@ -79,12 +79,11 @@ subprojects {
 project(':account') {
     dependencies {
         implementation project(':core')
-
-        implementation 'org.springframework.boot:spring-boot-starter-security'
+//        implementation 'org.springframework.boot:spring-boot-starter-security'
     }
 }
 
-project(':account-event-listener') {
+project(':account-client') {
     dependencies {
         implementation project(':core')
         implementation project(':account')
@@ -94,12 +93,12 @@ project(':account-event-listener') {
 project(':outbound') {
     dependencies {
         implementation project(':core')
-        implementation project(':account-event-listener')
-        implementation project(':stock-event-listener')
+        implementation project(':account-client')
+        implementation project(':stock-client')
     }
 }
 
-project(':outbound-event-listener') {
+project(':outbound-client') {
     dependencies {
         implementation project(':core')
         implementation project(':outbound')
@@ -109,11 +108,11 @@ project(':outbound-event-listener') {
 project(':stock') {
     dependencies {
         implementation project(':core')
-        implementation project(':account-event-listener')
+        implementation project(':account-client')
     }
 }
 
-project(':stock-event-listener') {
+project(':stock-client') {
     dependencies {
         implementation project(':core')
         implementation project(':stock')
@@ -130,11 +129,11 @@ project(':all') {
     dependencies {
         implementation project(':core')
         implementation project(':account')
-        implementation project(':account-event-listener')
+        implementation project(':account-client')
         implementation project(':outbound')
-        implementation project(':outbound-event-listener')
+        implementation project(':outbound-client')
         implementation project(':stock')
-        implementation project(':stock-event-listener')
+        implementation project(':stock-client')
     }
 
     bootJar {
