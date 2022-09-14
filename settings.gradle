@@ -7,5 +7,3 @@ include 'outbound-event-listener'
 include 'stock-event-listener'
 include 'all'
 include 'core'
-include 'account-core'
-

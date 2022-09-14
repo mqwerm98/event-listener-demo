@@ -1,4 +1,4 @@
-package com.eventlistener.core.account;
+package com.eventlistener.account;
 
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 

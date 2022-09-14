@@ -1,6 +1,7 @@
 package com.eventlistener.outbound.controller;
 
-import com.eventlistener.core.account.CurrentAccount;
+import com.eventlistener.account.CurrentAccount;
+import com.eventlistener.core.account.Account;
 import com.eventlistener.outbound.service.OutboundService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

@@ -76,15 +76,9 @@ subprojects {
 
 }
 
-project(':account-core') {
-    dependencies {
-        implementation 'org.springframework.boot:spring-boot-starter-security'
-    }
-}
-
 project(':account') {
     dependencies {
-        implementation project(':account-core')
+        implementation project(':core')
 
         implementation 'org.springframework.boot:spring-boot-starter-security'
     }
@@ -92,15 +86,14 @@ project(':account') {
 
 project(':account-event-listener') {
     dependencies {
-        api project(':account-core')
+        implementation project(':core')
         implementation project(':account')
-
-        implementation 'org.springframework.boot:spring-boot-starter-security'
     }
 }
 
 project(':outbound') {
     dependencies {
+        implementation project(':core')
         implementation project(':account-event-listener')
         implementation project(':stock-event-listener')
     }
@@ -108,24 +101,28 @@ project(':outbound') {
 
 project(':outbound-event-listener') {
     dependencies {
+        implementation project(':core')
         implementation project(':outbound')
     }
 }
 
 project(':stock') {
     dependencies {
+        implementation project(':core')
         implementation project(':account-event-listener')
     }
 }
 
 project(':stock-event-listener') {
     dependencies {
+        implementation project(':core')
         implementation project(':stock')
     }
 }
 
 project(':core') {
     dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-security'
     }
 }
 

@@ -1,4 +1,4 @@
-package com.eventlistener.account.core;
+package com.eventlistener.core.account;
 
 import lombok.AccessLevel;
 import lombok.EqualsAndHashCode;
